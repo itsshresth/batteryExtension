@@ -1,10 +1,8 @@
-/*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap");
 
-/*=============== VARIABLES CSS ===============*/
+
 :root {
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
+  
   --gradient-color-red: linear-gradient(90deg, 
                           hsl(7, 89%, 46%) 15%,
                           hsl(11, 93%, 68%) 100%);
@@ -21,8 +19,6 @@
   --body-color: hsl(0, 0%, 11%);
   --container-color: hsl(0, 0%, 9%);
 
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: 'Rubik', sans-serif;
 
   --biggest-font-size: 2.5rem;
@@ -30,7 +26,7 @@
   --smaller-font-size: .75rem;
 }
 
-/* Responsive typography */
+
 @media screen and (min-width: 968px) {
   :root {
     --biggest-font-size: 2.75rem;
@@ -39,7 +35,6 @@
   }
 }
 
-/*=============== BASE ===============*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -53,10 +48,9 @@ body {
   color: var(--text-color);
 }
 
-/*=============== BATTERY ===============*/
+
 .battery {
   height: 100vh;
-  width: 40vh;
   display: grid;
   place-items: center;
   margin: 0 1.5rem;
@@ -138,18 +132,17 @@ body {
   border-radius: 50%;
 }
 
-/* Full battery icon color */
 .green-color {
   background: var(--gradient-color-green);
 }
 
-/* Battery charging animation */
+
 .animated-green {
   background: var(--gradient-color-green);
   animation: animated-charging-battery 1.2s infinite alternate;
 }
 
-/* Low battery animation */
+
 .animated-red {
   background: var(--gradient-color-red);
   animation: animated-low-battery 1.2s infinite alternate;
@@ -180,7 +173,6 @@ body {
   }
 }
 
-/* Liquid battery with gradient color */
 .gradient-color-red,
 .gradient-color-red::after {
   background: var(--gradient-color-red);
@@ -201,22 +193,20 @@ body {
   background: var(--gradient-color-green);
 }
 
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
+
 @media screen and (max-width: 320px) {
   .battery__card {
     zoom: .8;
   }
 }
 
-/* For medium devices */
 @media screen and (min-width: 430px) {
   .battery__card {
     width: 312px;
   }
 }
 
-/* For large devices */
+
 @media screen and (min-width: 1024px) {
   .battery__card {
     zoom: 1.5;
